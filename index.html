@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>METU Gyakorló oldal</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <h1 class="oldal-cim">METU Gyakorló oldal</h1>
@@ -74,6 +76,14 @@
         <p id="szoveg-1">Ez az eredeti szöveg.</p>
         <button id="gomb-1" class="js-gomb">Változtasd meg!</button>
     </div>
+    <script>
+        var gomb1 = document.getElementById("gomb-1");
+        var szoveg1 = document.getElementById("szoveg-1");
+
+        gomb1.addEventListener("click", function () {
+            szoveg1.textContent = "Ez a hamis szöveg.";
+        });
+    </script>
 
     <!-- 5b. Szín megváltoztatása -->
     <div class="js-doboz">
@@ -81,6 +91,16 @@
         <div id="szines-doboz" class="szines-doboz">Ez a doboz</div>
         <button id="gomb-2" class="js-gomb">Színezd át!</button>
     </div>
+    <script>
+        var gomb2 = document.getElementById("gomb-2");
+        var szinesDoboz = document.getElementById("szines-doboz");
+
+        gomb2.addEventListener("click", function () {
+            szinesDoboz.style.backgroundColor = "tomato";
+            szinesDoboz.textContent = "Ez még mindig a doboz";
+            szinesDoboz.style.color = "white";
+        });
+    </script>
 
     <!-- 5c. Számláló -->
     <div class="js-doboz">
@@ -90,6 +110,22 @@
             <button id="gomb-minus" class="js-gomb">−</button>
             <button id="gomb-plus" class="js-gomb">+</button>
         </div>
+        <script>
+            var szamlaloKijelzo = document.getElementById("szamlalo");
+            var gombPlus = document.getElementById("gomb-plus");
+            var gombMinus = document.getElementById("gomb-minus");
+            var aktualisErtek = 0;
+
+            gombPlus.addEventListener("click", function () {
+                aktualisErtek = aktualisErtek + 1;
+                szamlaloKijelzo.textContent = aktualisErtek;
+            });
+
+            gombMinus.addEventListener("click", function () {
+                aktualisErtek = aktualisErtek - 1;
+                szamlaloKijelzo.textContent = aktualisErtek;
+            });
+        </script>
     </div>
 
     <!-- 5d. Lista bővítés -->
@@ -118,4 +154,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>

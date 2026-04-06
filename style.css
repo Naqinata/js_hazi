@@ -52,39 +52,27 @@ body {
 }
 
 
-/* ================================
-   1. NAVIGÁCIÓ — FELADAT
-   
-   Cél: a logo BALRA, a menü JOBBRA kerüljön
-   
-   Írd ide:
-   - display: flex
-   - justify-content: space-between
-   - align-items: center
-   ================================ */
+
 .navbar {
     background: white;
     padding: 1rem 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-
-    /* --- FELADAT: írd ide a flexbox-ot --- */
-
-
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    justify-content: space-between;
+    display: flex
 }
 
 .nav-logo {
     font-weight: 700;
     font-size: 1.2rem;
+    display: flex;
+
 }
 
 .nav-lista {
     list-style: none;
-
-    /* --- FELADAT: a linkek legyenek egymás MELLETT --- */
-    /* Tipp: display: flex; gap: 1rem; */
-
-
+    display: flex;
+    gap: 1rem;
 }
 
 .nav-link {
@@ -97,22 +85,10 @@ body {
 }
 
 
-/* ================================
-   2. KÁRTYÁK — FELADAT
-   
-   Cél: a 3 kártya legyen EGYMÁS MELLETT
-   
-   Írd ide:
-   - display: flex
-   - gap: 1rem
-   
-   A .kartya-ra:
-   - flex: 1     (egyenlő szélességűek lesznek)
-   ================================ */
 .kartya-sor {
 
-    /* --- FELADAT: írd ide a flexbox-ot --- */
-
+    display: flex;
+    gap: 1rem;
 
 }
 
@@ -120,10 +96,9 @@ body {
     background: white;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 
-    /* --- FELADAT: adj hozzá flex: 1 --- */
-
+    flex: 1;
 
 }
 
@@ -136,25 +111,14 @@ body {
     font-size: 0.9rem;
 }
 
-
-/* ================================
-   3. PROFIL KÁRTYA — FELADAT
-   
-   Cél: a kép és a szöveg EGYMÁS MELLETT
-   
-   Írd ide:
-   - display: flex
-   - align-items: center
-   - gap: 1.5rem
-   ================================ */
 .profil {
     background: white;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-
-    /* --- FELADAT: írd ide a flexbox-ot --- */
-
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    align-items: center;
+    gap: 1.5rem;
+    display: flex;
 
 }
 
@@ -163,9 +127,7 @@ body {
     height: 80px;
     background: #ddd;
     border-radius: 50%;
-
-    /* --- FELADAT: adj hozzá flex-shrink: 0 --- */
-    /* (hogy ne zsugorodjon össze) */
+    flex-shrink: 0;
 
 }
 
@@ -184,28 +146,17 @@ body {
     color: #555;
 }
 
-
-/* ================================
-   4. LÁBLÉC — FELADAT
-   
-   Cél: bal szöveg BALRA, jobb szöveg JOBBRA
-   
-   Írd ide:
-   - display: flex
-   - justify-content: space-between
-   ================================ */
 .lablec {
     background: #333;
     color: #fff;
     padding: 1rem 1.5rem;
     border-radius: 10px;
-
-    /* --- FELADAT: írd ide a flexbox-ot --- */
-
-
+    display: flex;
+    justify-content: space-between;
 }
 
-.lablec-bal, .lablec-jobb {
+.lablec-bal,
+.lablec-jobb {
     font-size: 0.85rem;
 }
 
@@ -218,7 +169,7 @@ body {
     background: white;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     margin-bottom: 1rem;
 }
 
